@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Мой сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #f9f7f7, #d6e6f2, #f7e6f2);
+            /* Пастельный градиент фона */
+            min-height: 100vh;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffb3b3; /* пастельный красный */
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu a {
+            text-decoration: none;
+            color: #6b2c2c; /* тёмно-красный для контраста */
+            font-weight: 700;
+            padding: 8px 15px;
+            transition: color 0.3s ease;
+            font-size: 18px;
+        }
+        .menu a:hover {
+            color: #a64d4d;
+        }
+        .content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px 30px;
+            background-color: #fff0f5; /* очень светлый пастельный розовый */
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(182, 150, 170, 0.3);
+            overflow: hidden;
+            color: #4a2c3b;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #7a4a6f;
+            font-size: 36px;
+            text-shadow: 1px 1px 2px #d9bde3;
+        }
+        ul {
+            margin-top: 0;
+        }
+        img.game-image {
+            float: left;
+            height: 360px;
+            width: auto;
+            margin: 0 20px 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(182, 150, 170, 0.4);
+            transition: transform 0.3s ease;
+        }
+        img.game-image:hover {
+            transform: scale(1.05);
+        }
+        form.quiz-form {
+            margin-top: 20px;
+        }
+        .question {
+            margin-bottom: 22px;
+        }
+        .question p {
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #7a4a6f;
+            text-shadow: 1px 1px 1px #f0d9f0;
+        }
+        .answers label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-size: 17px;
+            color: #5a3e57;
+            user-select: none;
+            transition: color 0.3s ease;
+        }
+        .answers label:hover {
+            color: #a16c9a;
+        }
+        button#submit-btn {
+            padding: 12px 28px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #ffb3b3;
+            color: #6b2c2c;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(182, 150, 170, 0.4);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 10px;
+            display: block;
+        }
+        button#submit-btn:hover {
+            background-color: #d97a7a;
+            color: #fff;
+        }
+        #result {
+            margin-top: 25px;
+            font-weight: 700;
+            font-size: 22px;
+            color: #7a4a6f;
+            text-align: center;
+            text-shadow: 1px 1px 2px #f0d9f0;
+        }
+        /* Центрирование видео */
+        .video-container {
+            max-width: 720px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+        .video-container iframe {
+            width: 100%;
+            max-width: 720px;
+            height: 405px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(182, 150, 170, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+        .video-container iframe:hover {
+            box-shadow: 0 8px 20px rgba(182, 150, 170, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <a href="#about">Об игре</a>
+        <a href="#facts">Интересные факты</a>
+        <a href="#metro-royale">Metro Royale</a>
+        <a href="#quiz">Викторина</a>
+        <a href="#author">Об авторе</a>
+    </nav>
+
+    <section id="about" class="content">
+        <h2>Об игре</h2>
+        <img class="game-image" src="https://sun9-15.userapi.com/impf/ojh3bDewEf79Ulx0j9s6w6YtpHHA2y8tICMr0A/uxOJcUVU6MA.jpg?size=1920x768&quality=95&crop=34,8,1223,488&sign=c0a12933ec65d97718c8292077c91efd&type=cover_group" alt="Изображение игры PUBG" />
+        <p>
+            PUBG (PlayerUnknown’s Battlegrounds) — это многопользовательская онлайн-игра в жанре королевской битвы, где до 100 игроков сражаются друг с другом на большой карте, чтобы остаться последним выжившим. Игра сочетает в себе элементы тактики, выживания и экшена.
+        </p>
+        <p>
+            Игроки начинают без оружия и снаряжения, и должны исследовать карту, искать оружие, боеприпасы, броню и другие ресурсы, чтобы повысить свои шансы на победу. В процессе игры зона безопасной территории постепенно сужается, вынуждая участников сталкиваться в ближнем бою.
+        </p>
+        <p>
+            Игра получила широкое признание благодаря реалистичной графике, динамичному геймплею и возможности играть как в одиночку, так и в командах. PUBG стала одной из самых популярных игр в жанре королевской битвы и оказала значительное влияние на развитие этого жанра.
+        </p>
+    </section>
+
+    <section id="facts" class="content">
+        <h2>Пять интересных фактов о PUBG</h2>
+        <ol>
+            <li><strong>Самая скачиваемая игра месяца</strong>: В июле 2021 года PUBG MOBILE была признана самой скачиваемой игрой месяца, что подтверждает её популярность по всему миру.</li>
+            <li><strong>Название игры</strong>: Название «PlayerUnknown’s Battlegrounds» произошло от псевдонима создателя, Брендана Грина, где PlayerUnknown — это его никнейм.</li>
+            <li><strong>Вдохновение для режима выживания</strong>: Идея режима «Королевская битва» взята из фильмов «Голодные игры» и японского фильма «Королевская битва», что вдохновило создание уникального режима игры.</li>
+            <li><strong>Международные соревнования</strong>: В PUBG MOBILE проводится чемпионат мира с призовым фондом в миллионы долларов, что делает его одним из крупнейших киберспортивных событий.</li>
+            <li><strong>Разнообразие контента</strong>: В игре регулярно появляются коллаборации с известными брендами, музыкантами и фильмами, что делает игровой процесс ещё более увлекательным и разнообразным.</li>
+        </ol>
+    </section>
+
+    <section id="metro-royale" class="content">
+        <h2>Metro Royale в PUBG</h2>
+        <p><strong>Metro Royale</strong> — это самостоятельный режим в PUBG Mobile, который отличается от классической королевской битвы. В нем доступны уникальные локации, новые цели и механики, связанные с выживанием и сбором ценного лута. Этот режим происходит во вселенной Metro 2033 и включает в себя сражения с монстрами, ботами и другими игроками, а также эвакуацию с награбленным.</p>
+        <h3>Как запустить режим</h3>
+        <p>Для этого нужно выбрать режим «Другое» в меню и выбрать Metro Royale. Требуются последние обновления, уровень аккаунта не ниже 10 и выполнение определённых условий.</p>
+        <h3>Отличия от обычной битвы</h3>
+        <p>Metro Royale — это отдельная игра внутри PUBG, с уникальными картами, задачами и механиками, отличающимися от классической королевской битвы.</p>
+    </section>
+
+    <section id="quiz" class="content">
+        <h2>Викторина</h2>
+        <form class="quiz-form" id="quizForm">
+            <div class="question">
+                <p>1. Какова основная цель режима Metro Royale?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q1" value="a"> a) Выжить до конца и убить всех игроков</label>
+                    <label><input type="radio" name="q1" value="b"> b) Собрать как можно больше ценного лута и эвакуировать его</label>
+                    <label><input type="radio" name="q1" value="c"> c) Построить базу и защитить ее</label>
+                    <label><input type="radio" name="q1" value="d"> d) Уничтожить всех монстров на карте</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. Чем отличается режим Metro Royale от классического Battle Royale в PUBG?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q2" value="a"> a) В нем игроки сражаются только с монстрами</label>
+                    <label><input type="radio" name="q2" value="b"> b) В нем есть отдельное лобби, уникальные локации и инвентарь</label>
+                    <label><input type="radio" name="q2" value="c"> c) В нем нельзя использовать оружие</label>
+                    <label><input type="radio" name="q2" value="d"> d) В нем победитель определяется по времени выживания</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Какие условия нужно выполнить, чтобы получить доступ к режиму Metro Royale?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q3" value="a"> a) Уровень аккаунта должен быть не ниже 10, и установлен последний апдейт</label>
+                    <label><input type="radio" name="q3" value="b"> b) Нужно пройти все миссии в классической королевской битве</label>
+                    <label><input type="radio" name="q3" value="c"> c) Нужно иметь уровень 50 и выше</label>
+                    <label><input type="radio" name="q3" value="d"> d) Необходимо купить специальный билет</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. Что происходит при смерти игрока в режиме Metro Royale?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q4" value="a"> a) Он теряет весь собранный лут</label>
+                    <label><input type="radio" name="q4" value="b"> b) Он возвращается в стартовую точку без лута</label>
+                    <label><input type="radio" name="q4" value="c"> c) Он теряет весь накопленный лут, но его можно спрятать в ящиках</label>
+                    <label><input type="radio" name="q4" value="d"> d) Он автоматически выигрывает раунд</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. Какие враги встречаются в режиме Metro Royale?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q5" value="a"> a) Только другие игроки</label>
+                    <label><input type="radio" name="q5" value="b"> b) Монстры, боты, боссы и другие игроки</label>
+                    <label><input type="radio" name="q5" value="c"> c) Только боты и монстры</label>
+                    <label><input type="radio" name="q5" value="d"> d) Только боссы и NPC</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>6. Какие тактики рекомендуются для успешной игры в Metro Royale?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q6" value="a"> a) Жадничать и быстро собирать лут</label>
+                    <label><input type="radio" name="q6" value="b"> b) Быстро бегать к эвакуации без боя</label>
+                    <label><input type="radio" name="q6" value="c"> c) Быть осторожным, скрытным и использовать ящики для сохранения лута</label>
+                    <label><input type="radio" name="q6" value="d"> d) Постоянно атаковать других игроков без стратегии</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>7. Что такое «Metro Cash» в режиме Metro Royale?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q7" value="a"> a) Внутриигровая валюта для покупки снаряжения и оружия</label>
+                    <label><input type="radio" name="q7" value="b"> b) Название оружия в режиме</label>
+                    <label><input type="radio" name="q7" value="c"> c) Время, необходимое для эвакуации</label>
+                    <label><input type="radio" name="q7" value="d"> d) Имя босса в режиме</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>8. Какие новые механики появились в обновленной версии режима в 2023 году?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q8" value="a"> a) Натяжные тросы, лестницы и ускорения</label>
+                    <label><input type="radio" name="q8" value="b"> b) Возможность строить базы</label>
+                    <label><input type="radio" name="q8" value="c"> c) Водные битвы и подводные миссии</label>
+                    <label><input type="radio" name="q8" value="d"> d) Новые виды транспорта</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>9. Какая карта была добавлена в 2023 году для режима Metro Royale?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q9" value="a"> a) Туманный порт</label>
+                    <label><input type="radio" name="q9" value="b"> b) Затерянный город</label>
+                    <label><input type="radio" name="q9" value="c"> c) Ледяная равнина</label>
+                    <label><input type="radio" name="q9" value="d"> d) Остров сокровищ</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>10. Почему важно не жадничать и эвакуироваться, даже если у вас мало лута?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q10" value="a"> a) Потому что можно потерять все, если погибнешь</label>
+                    <label><input type="radio" name="q10" value="b"> b) Потому что это увеличит шанс победы в классическом режиме</label>
+                    <label><input type="radio" name="q10" value="c"> c) Потому что в режиме нельзя собирать лут после эвакуации</label>
+                    <label><input type="radio" name="q10" value="d"> d) Потому что это даст бонус к уровню</label>
+                </div>
+            </div>
+            <button type="button" id="submit-btn">Результат</button>
+        </form>
+        <div id="result"></div>
+
+        <!-- Видео Rutube по центру -->
+        <div class="video-container" style="margin-top: 40px;">
+            <iframe width="720" height="405" src="https://rutube.ru/play/embed/f53fa290211761f9a0995d81552a0735" frameborder="0" allow="clipboard-write; autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="author" class="content">
+        <h2>Об авторе</h2>
+        <p>Михайлов Глеб - начинающий автор, родился и вырос в г. Чебоксары. В настоящее время сотрудничает с местным издательством, где и была опубликована его первая работа.</p>
+    </section>
+
+    <script>
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'a',
+            q4: 'c',
+            q5: 'b',
+            q6: 'c',
+            q7: 'a',
+            q8: 'a',
+            q9: 'a',
+            q10: 'a'
+        };
+
+        document.getElementById('submit-btn').addEventListener('click', () => {
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            for (let i = 1; i <= 10; i++) {
+                const qName = 'q' + i;
+                const selected = form.querySelector(`input[name="${qName}"]:checked`);
+                if (selected && selected.value === correctAnswers[qName]) {
+                    score++;
+                }
+            }
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `Вы ответили правильно на ${score} из 10 вопросов.`;
+        });
+    </script>
+</body>
+</html>
